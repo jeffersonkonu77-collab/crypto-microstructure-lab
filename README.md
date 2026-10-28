@@ -14,8 +14,15 @@ Streams all Binance perpetuals and alerts on 3% (large coins) or 5% (smaller coi
 
 ## Skills shown
 Python (asyncio, websockets, pandas, SQLite), order book and order flow analysis, statistical testing, automated testing.
-
 For more information on how to use this, read the README files within the files.
+
+## License
+Licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). This code is for research
+and education only. Using it, or anything derived from it, to trade with real
+capital for profit, or inside any business, is not permitted without written
+permission from the author. For commercial licensing, contact williamkonu23@gmail.com.
 
 ## Contact
 Jefferson Konu · linkedin.com/in/ebunoluwa-konu-aat-308306244 · williamkonu23@gmail.com
+
+License: [PolyForm Noncommercial 1.0.0](../LICENSE)
