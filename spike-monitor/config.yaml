@@ -1,0 +1,30 @@
+# spikemon settings. Anything you leave out falls back to the built-in default.
+# No Binance key is needed: market data is public.
+
+spike:
+  interval_minutes: 15            # clock-aligned UTC intervals (:00 :15 :30 :45)
+  big_tier_volume_usd: 1000000000 # 24h volume at or above this uses the big-tier trigger
+  big_tier_threshold_pct: 3.0
+  small_tier_threshold_pct: 5.0
+  order_flag_pct_of_volume: 5.0   # flag an order that is this % of the interval's volume
+  top_orders: 3
+  volatile_upgrade: true          # one VERY VOLATILE alert if both directions cross the trigger
+
+watchlist:                        # drives order book walls and the dashboard focus
+  top_volume: 20
+  top_gainers: 25
+  top_losers: 25
+  min_volume_usd_movers: 20000000 # ignore illiquid coins in the gainers/losers lists
+
+universe:
+  underlying_types: [COIN]        # crypto only (stocks, ETFs, commodities excluded)
+  exclude: []                     # extra symbols to skip, e.g. [FOOUSDT]
+
+alerts:
+  telegram_token: ""              # or set TELEGRAM_BOT_TOKEN
+  telegram_chat_id: ""            # or set TELEGRAM_CHAT_ID
+
+storage:
+  db_path: spikemon.sqlite3
+  alert_log_path: alerts.log      # full text of every alert, appended live. Set to "" to disable.
+  retention_days: 30              # prunes intervals, walls, gaps and health only. Spikes are kept.
